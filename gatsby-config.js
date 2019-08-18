@@ -18,13 +18,6 @@ module.exports = {
         `gatsby-plugin-netlify`,
         `gatsby-plugin-robots-txt`,
         `gatsby-plugin-sass`,
-        {
-            resolve: `gatsby-source-ghost`,
-            options: {
-                apiUrl: `https://ziondials.com`,
-                contentApiKey: `b91b84fa25ccb7da37b529c73c`,
-            },
-        },
         `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-google-tagmanager`,
