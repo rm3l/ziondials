@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
             site {
                 siteMetadata {
                     title
+                    siteCodeLicenseUrl
                 }
             }
         }
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
         <>
             <Navbar siteTitle={data.site.siteMetadata.title} />
             <main>{children}</main>
-            <Footer siteTitle={data.site.siteMetadata.title} />
+            <Footer siteTitle={data.site.siteMetadata.title} siteCodeLicenseUrl={data.site.siteMetadata.siteCodeLicenseUrl}/>
         </>
     )
 }

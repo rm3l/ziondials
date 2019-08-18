@@ -4,6 +4,7 @@ module.exports = {
         description: `All views are my own.`,
         author: `@ziondials`,
         siteUrl: `https://ziondials.netlify.com`,
+        siteCodeLicenseUrl: `https://github.com/ZionDials/ziondials/blob/master/LICENSE`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -48,6 +49,8 @@ module.exports = {
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
+        `gatsby-plugin-sitemap`,
+        `gatsby-plugin-styled-components`,
         `gatsby-plugin-netlify`,
     ],
 }
