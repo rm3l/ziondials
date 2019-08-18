@@ -54,7 +54,14 @@ export class Navbar extends PureComponent {
                             ? `navbar-menu is-active`
                             : `navbar-menu`
                     }
-                ></div>
+                >
+                    <div className="navbar-end">
+                        <Link to="/" className="navbar-item">Home</Link>
+                        <Link to="/about/" className="navbar-item">About</Link>
+                        <Link to="/blog/" className="navbar-item">Blog</Link>
+                        <Link to="/contact/" className="navbar-item">Contact</Link>
+                    </div>
+                </div>
             </nav>
         )
     }
