@@ -5,6 +5,7 @@ import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-ic
 import styled from 'styled-components'
 
 const SocialIcon = styled.a`
+font-size: 2.5rem;
 margin-right: 2rem;
 `
 
@@ -13,13 +14,13 @@ const Footer = ({ siteTitle, siteCodeLicenseUrl, twitterUrl, linkedinUrl, github
         <div className="container">
             <div className="content has-text-centered is-white">
                 <p className="social-buttons">
-                    <SocialIcon className="is-size-2" rel="noopener noreferrer" target="_blank" href={twitterUrl}>
+                    <SocialIcon rel="noopener noreferrer" target="_blank" href={twitterUrl}>
                         <FontAwesomeIcon icon={faTwitter} />
                     </SocialIcon>
-                    <SocialIcon className="is-size-2" rel="noopener noreferrer" target="_blank" href={linkedinUrl}>
+                    <SocialIcon rel="noopener noreferrer" target="_blank" href={linkedinUrl}>
                         <FontAwesomeIcon icon={faLinkedin} />
                     </SocialIcon>
-                    <SocialIcon className="is-size-2" rel="noopener noreferrer" target="_blank" href={githubUrl}>
+                    <SocialIcon rel="noopener noreferrer" target="_blank" href={githubUrl}>
                         <FontAwesomeIcon icon={faGithub} />
                     </SocialIcon>
                 </p>
