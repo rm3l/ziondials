@@ -1,1 +1,11 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
 @import "~bulma/bulma.sass";
+
+.social-buttons a {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+}

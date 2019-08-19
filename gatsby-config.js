@@ -56,5 +56,6 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-netlify`,
+        `gatsby-plugin-purgecss`,
     ],
 }
