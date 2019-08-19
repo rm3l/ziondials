@@ -3,7 +3,10 @@ module.exports = {
         title: `Zion Dials`,
         description: `All views are my own.`,
         author: `@ziondials`,
-        siteUrl: `https://ziondials.netlify.com`,
+        siteUrl: `https://ziondials.com`,
+        linkedinUrl: `https://linkedin.com/in/ziondials`,
+        githubUrl: `https://github.com/ZionDials`,
+        twitterUrl: `https://twitter.com/ziondials`,
         siteCodeLicenseUrl: `https://github.com/ZionDials/ziondials/blob/master/LICENSE`,
     },
     plugins: [

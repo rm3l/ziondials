@@ -20,6 +20,9 @@ const Layout = ({ children }) => {
                 siteMetadata {
                     title
                     siteCodeLicenseUrl
+                    twitterUrl
+                    linkedinUrl
+                    githubUrl
                 }
             }
         }
@@ -31,7 +34,7 @@ const Layout = ({ children }) => {
                 <Navbar siteTitle={data.site.siteMetadata.title} />
                 <main>{children}</main>
             </div>
-            <Footer siteTitle={data.site.siteMetadata.title} siteCodeLicenseUrl={data.site.siteMetadata.siteCodeLicenseUrl}/>
+            <Footer siteTitle={data.site.siteMetadata.title} siteCodeLicenseUrl={data.site.siteMetadata.siteCodeLicenseUrl} twitterUrl={data.site.siteMetadata.twitterUrl} linkedinUrl={data.site.siteMetadata.linkedinUrl} githubUrl={data.site.siteMetadata.githubUrl}/>
         </>
     )
 }
