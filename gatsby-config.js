@@ -206,6 +206,23 @@ module.exports = {
         },
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-react-helmet`,
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: `UA-122473244-1`,
+                // Defines where to place the tracking script - `true` in the head and `false` in the body
+                head: false,
+                // Setting this parameter is optional
+                anonymize: false,
+                // Setting this parameter is also optional
+                respectDNT: true,
+                // Delays sending pageview hits on route update (in milliseconds)
+                pageTransitionDelay: 0,
+                sampleRate: 5,
+                siteSpeedSampleRate: 10,
+                cookieDomain: `ziondials.com`,
+            },
+        },
         `gatsby-plugin-force-trailing-slashes`,
         `gatsby-plugin-offline`,
     ],
