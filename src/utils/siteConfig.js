@@ -14,7 +14,9 @@ module.exports = {
     backgroundColor: `#e9e9e9`, // Used for Offline Manifest
     themeColor: `#15171A`, // Used for Offline Manifest
 
+    facebookUrl: ``,
     linkedinUrl: `https://linkedin.com/in/ziondials`,
+    instagramUrl: ``,
     githubUrl: `https://github.com/ZionDials`,
     twitterUrl: `https://twitter.com/ziondials`,
     siteCodeLicenseUrl: `https://github.com/ZionDials/ziondials/blob/master/LICENSE`,

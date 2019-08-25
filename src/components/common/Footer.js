@@ -5,17 +5,23 @@ const Footer = ({ site, config }) => (
     <footer className="footer">
         <div className="container">
             <div className="content has-text-centered is-white">
-                <p className="social-buttons">
-                    <a className="twitter-icon" rel="noopener noreferrer" target="_blank" href={config.twitterUrl}>
+                <div className="social-buttons">
+                    {config.twitterUrl && <a className="twitter-icon" rel="noopener noreferrer" target="_blank" href={config.twitterUrl}>
                         <span className="fab fa-twitter"></span>
-                    </a>
-                    <a rel="noopener noreferrer" target="_blank" href={config.linkedinUrl}>
+                    </a> }
+                    {config.linkedinUrl && <a rel="noopener noreferrer" target="_blank" href={config.linkedinUrl}>
                         <span className="fab fa-linkedin"></span>
-                    </a>
-                    <a rel="noopener noreferrer" target="_blank" href={config.githubUrl}>
+                    </a>}
+                    {config.githubUrl && <a rel="noopener noreferrer" target="_blank" href={config.githubUrl}>
                         <span className="fab fa-github"></span>
-                    </a>
-                </p>
+                    </a>}
+                    {config.instagramUrl && <a rel="noopener noreferrer" target="_blank" href={config.instagramUrl}>
+                        <span className="fab fa-instagram"></span>
+                    </a>}
+                    {config.facebookUrl && <a rel="noopener noreferrer" target="_blank" href={config.facebookUrl}>
+                        <span className="fab fa-facebook-f"></span>
+                    </a>}
+                </div>
                 <p>
                     Copyright &copy; {new Date().getFullYear()} {site.title}. The source code is licensed {` `}
                     <a rel="noopener noreferrer" target="_blank" href={config.siteCodeLicenseUrl}>MIT</a>.
@@ -35,6 +41,8 @@ Footer.propTypes = {
         twitterUrl: PropTypes.string,
         linkedinUrl: PropTypes.string,
         githubUrl: PropTypes.string,
+        instagramUrl: PropTypes.string,
+        facebookUrl: PropTypes.string,
     }),
 }
 
