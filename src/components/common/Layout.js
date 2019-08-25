@@ -29,11 +29,11 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
             <body className={bodyClass} />
         </Helmet>
         <Navbar site={site} />
-                <main className="site-main">
-                    {/* All the main content gets inserted here, index.js, post.js */}
-                    {children}
-                </main>
-            <Footer site={site} siteCodeLicenseUrl={config.siteCodeLicenseUrl} twitterUrl={config.twitterUrl} linkedinUrl={config.linkedinUrl} githubUrl={config.githubUrl}/>
+            <main className="site-main">
+                {/* All the main content gets inserted here, index.js, post.js */}
+                {children}
+            </main>
+        <Footer site={site} config={config}/>
 
     </>
     )
