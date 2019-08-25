@@ -18,6 +18,7 @@ import Navbar from './Navbar'
 * styles, and meta data for each page.
 *
 */
+
 const DefaultLayout = ({ data, children, bodyClass }) => {
     const site = data.allGhostSettings.edges[0].node
 

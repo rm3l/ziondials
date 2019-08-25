@@ -12,6 +12,7 @@ import { Link } from 'gatsby'
 * to a `site-nav-item` class.
 *
 */
+
 const Navigation = ({ data, navClass }) => (
     <>
         {data.map((navItem, i) => {
