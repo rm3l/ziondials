@@ -106,6 +106,15 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                // Setting a color is optional.
+                color: `#44C7F4`,
+                // Disable the loading spinner.
+                showSpinner: false,
+            },
+        },
+        {
             resolve: `gatsby-plugin-feed`,
             options: {
                 query: `
