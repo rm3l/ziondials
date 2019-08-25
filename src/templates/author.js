@@ -11,23 +11,20 @@ import { MetaData } from '../components/common/meta'
 * Loads all posts for the requested author incl. pagination.
 *
 */
+
 const Author = ({ data, location, pageContext }) => {
     const author = data.ghostAuthor
     const posts = data.allGhostPost.edges
 
     return (
         <>
-            <MetaData
-                data={data}
-                location={location}
-                type="profile"
-            />
+            <MetaData data={data} location={location} type="profile" />
             <Layout>
                 <div className="container">
                     <header className="author-header">
                         <div className="author-header-content">
-                            <h1>{author.name}</h1>
-                            {author.bio && <p>{author.bio}</p>}
+                            <p className="has-text-weight-semibold is-size-3">{author.name}</p>
+                            {author.bio && <p className=" is-size-6">{author.bio}</p>}
                         </div>
                         <div className="author-header-image">
                             {author.profile_image && <img src={author.profile_image} alt={author.name} />}

@@ -12,6 +12,7 @@ import { MetaData } from '../components/common/meta'
 * This file renders a single page and loads all the content.
 *
 */
+
 const Page = ({ data, location }) => {
     const page = data.ghostPage
 

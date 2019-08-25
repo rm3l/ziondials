@@ -1,14 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-/*
-    The "social-buttons" css class is declared in the layout.scss file
-    I found that using styled components with Font Awesome caused
-    the icon to be loaded first and then it's size modified after.
-    So for a user, it would load the icon full screen and then shrink
-    to the correct size that it should be.
-*/
-
 const Footer = ({ site, siteCodeLicenseUrl, twitterUrl, linkedinUrl, githubUrl }) => (
     <footer className="footer">
         <div className="container">

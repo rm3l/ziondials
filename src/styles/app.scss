@@ -1,7 +1,7 @@
 /* FontAwesome
 /* ---------------------------------------------------------- */
 
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts"; // Required for Fontawesome & must be declared first
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
@@ -17,17 +17,24 @@ $inter-font-path: "~inter-ui/Inter (web)";
 
  @import "~firacode/distr/fira_code.css";
 
+/* FiraCode Font
+/* ---------------------------------------------------------- */
+
+@import "~typeface-pt-serif/index.css";
+
 /* Bulma Overides
 /* ---------------------------------------------------------- */
 
  $family-primary: 'Inter';
+ $family-secondary: 'PT Serif';
  $family-monospace: 'Fira Code';
  $green: #7ED321;
  $red: #FF3E00;
+ $black: #000000;
  $yellow: #F0CC00;
- $body-color: #000000;
- $content-heading-color: #000000;
- $footer-background-color: #000000;
+ $body-color: $black;
+ $content-heading-color: $black;
+ $footer-background-color: $black;
 
 @import "~bulma/bulma.sass";
 
@@ -69,29 +76,11 @@ $inter-font-path: "~inter-ui/Inter (web)";
     text-decoration: none;
 }
 
-.post-card-tags {
-    margin: 0 0 5px 0;
-    font-size: 1.4rem;
-    line-height: 1.15em;
-    color: var(--color-secondary);
-}
-
-
-.post-card-title {
-    margin: 0 0 10px 0;
-    padding: 0;
-}
-
-.post-card-excerpt {
-    font-size: 1.6rem;
-    line-height: 1.55em;
-}
-
 .post-card-image {
     margin: 0 0 10px 0;
     width: auto;
     height: 200px;
-    background: var(--color-secondary) no-repeat center center;
+    background: $grey no-repeat center center;
     background-size: cover;
 }
 
@@ -100,7 +89,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
     align-items: center;
     justify-content: space-between;
     margin: 10px 0 0 0;
-    color: var(--color-secondary);
+    color: $grey;
 }
 
 .post-card-footer-left {
@@ -126,7 +115,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
 .post-card-avatar .author-profile-image {
     display: block;
     width: 100%;
-    background: var(--color-secondary);
+    background: $grey;
     border-radius: 100%;
     object-fit: cover;
 }
@@ -150,7 +139,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
 
 .tag-header p {
     margin: 0;
-    color: var(--color-secondary);
+    color: $grey;
     font-size: 2.2rem;
     line-height: 1.3em;
 }
@@ -175,13 +164,9 @@ $inter-font-path: "~inter-ui/Inter (web)";
     margin: 0 0 4vw;
 }
 
-.author-header h1 {
-    margin: 0 0 1rem 0;
-}
-
 .author-header p {
     margin: 0;
-    color: var(--color-secondary);
+    color: $black;
     font-size: 2.2rem;
     line-height: 1.3em;
 }
@@ -193,11 +178,6 @@ $inter-font-path: "~inter-ui/Inter (web)";
     width: 120px;
     border-radius: 100%;
     overflow: hidden;
-}
-
-.author-header-meta {
-    display: flex;
-    margin: 1rem 0 0 0;
 }
 
 .author-header-item {
@@ -239,7 +219,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
     display: inline-block;
     padding: 10px 15px;
     border: var(--color-border) 1px solid;
-    color: var(--color-secondary);
+    color: $grey;
     text-decoration: none;
     font-size: 1.4rem;
     line-height: 1em;
@@ -252,7 +232,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
     width: 100px;
     margin-left: -50px;
     text-align: center;
-    color: var(--color-secondary);
+    color: $grey;
     font-size: 1.3rem;
 }
 
@@ -266,18 +246,18 @@ $inter-font-path: "~inter-ui/Inter (web)";
 
 
 .footer p {
-    color: #FFFFFF;
+    color: $white;
 }
 
 .footer small {
-    color: #FFFFFF;
+    color: $white;
 }
 
 .footer a {
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-    color: #FFFFFF;
+    color: $white;
 }
 .footer a:hover {
-    color: rgb(39, 110, 241);
+    color: $cyan;
 }
 
