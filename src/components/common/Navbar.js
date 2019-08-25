@@ -17,7 +17,7 @@ export class Navbar extends PureComponent {
 
     render() {
         return (
-            <nav className="navbar is-black" role="navigation" aria-label="main navigation">
+            <nav className="navbar" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link to="/" className="navbar-item is-size-5 has-text-weight-medium">
                         {this.props.site.title}

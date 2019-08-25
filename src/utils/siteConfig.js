@@ -16,7 +16,6 @@ module.exports = {
 
     facebookUrl: ``,
     linkedinUrl: `https://linkedin.com/in/ziondials`,
-    instagramUrl: ``,
     githubUrl: `https://github.com/ZionDials`,
     twitterUrl: `https://twitter.com/ziondials`,
     siteCodeLicenseUrl: `https://github.com/ZionDials/ziondials/blob/master/LICENSE`,

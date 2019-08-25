@@ -4,21 +4,18 @@ import PropTypes from 'prop-types'
 const Footer = ({ site, config }) => (
     <footer className="footer">
         <div className="container">
-            <div className="content has-text-centered is-white">
+            <div className="content has-text-centered">
                 <div className="social-buttons">
-                    {config.twitterUrl && <a className="twitter-icon" rel="noopener noreferrer" target="_blank" href={config.twitterUrl}>
+                    {config.twitterUrl && <a className="twitter" rel="noopener noreferrer" target="_blank" href={config.twitterUrl}>
                         <span className="fab fa-twitter"></span>
                     </a> }
-                    {config.linkedinUrl && <a rel="noopener noreferrer" target="_blank" href={config.linkedinUrl}>
+                    {config.linkedinUrl && <a className="linkedin" rel="noopener noreferrer" target="_blank" href={config.linkedinUrl}>
                         <span className="fab fa-linkedin"></span>
                     </a>}
-                    {config.githubUrl && <a rel="noopener noreferrer" target="_blank" href={config.githubUrl}>
+                    {config.githubUrl && <a className="github" rel="noopener noreferrer" target="_blank" href={config.githubUrl}>
                         <span className="fab fa-github"></span>
                     </a>}
-                    {config.instagramUrl && <a rel="noopener noreferrer" target="_blank" href={config.instagramUrl}>
-                        <span className="fab fa-instagram"></span>
-                    </a>}
-                    {config.facebookUrl && <a rel="noopener noreferrer" target="_blank" href={config.facebookUrl}>
+                    {config.facebookUrl && <a className="facebook" rel="noopener noreferrer" target="_blank" href={config.facebookUrl}>
                         <span className="fab fa-facebook-f"></span>
                     </a>}
                 </div>

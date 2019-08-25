@@ -15,7 +15,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
 /* FiraCode Font
 /* ---------------------------------------------------------- */
 
- @import "~firacode/distr/fira_code.css";
+@import "~firacode/distr/fira_code.css";
 
 /* FiraCode Font
 /* ---------------------------------------------------------- */
@@ -25,16 +25,28 @@ $inter-font-path: "~inter-ui/Inter (web)";
 /* Bulma Overides
 /* ---------------------------------------------------------- */
 
- $family-primary: 'Inter';
- $family-secondary: 'PT Serif';
- $family-monospace: 'Fira Code';
- $green: #7ED321;
- $red: #FF3E00;
- $black: #000000;
- $yellow: #F0CC00;
- $body-color: $black;
- $content-heading-color: $black;
- $footer-background-color: $black;
+$family-primary: 'Inter';
+$family-secondary: 'PT Serif';
+$family-monospace: 'Fira Code';
+
+$white: #FFFFFF;
+$green: #7ED321;
+$red: #FF3E00;
+$black: #000000;
+$yellow: #F0CC00;
+$orange: #FF9A57;
+$cyan: #44C7F4;
+
+$body-color: $black;
+$content-heading-color: $black;
+$footer-background-color: $black;
+
+// Navbar Overides
+$navbar-background-color: $black;
+$navbar-item-color: $white;
+$navbar-item-active-color: $cyan;
+$navbar-item-hover-color: $navbar-item-active-color;
+$navbar-item-hover-background-color: $navbar-background-color;
 
 @import "~bulma/bulma.sass";
 
@@ -43,7 +55,38 @@ $inter-font-path: "~inter-ui/Inter (web)";
 /* ---------------------------------------------------------- */
 
 .site-main {
-    padding: 4vw 0;
+    padding: $size-3;
+}
+
+.site-main p,
+ul,
+li {
+    font-family: 'PT Serif';
+    font-size: 1.2rem;
+}
+
+article a {
+    background:
+        linear-gradient(to bottom, $cyan 0%,
+            $cyan 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+}
+
+article a:hover {
+    background-size: 4px 50px;
+    color: $white;
+}
+
+/* Navbar
+/* ---------------------------------------------------------- */
+
+.navbar-brand a:hover {
+    color: $navbar-item-color;
 }
 
 /* Index
@@ -61,6 +104,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (max-width: 680px) {
     .post-feed {
         grid-template-columns: 1fr;
@@ -124,7 +168,6 @@ $inter-font-path: "~inter-ui/Inter (web)";
     width: 26px;
 }
 
-
 /* Tag Archives
 /* ---------------------------------------------------------- */
 
@@ -149,6 +192,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
         border-bottom: $black 1px solid;
         padding-bottom: 4vw;
     }
+
     .tag-header p {
         font-size: 1.7rem;
     }
@@ -194,9 +238,11 @@ $inter-font-path: "~inter-ui/Inter (web)";
         border-bottom: $black 1px solid;
         padding-bottom: 4vw;
     }
+
     .author-header p {
         font-size: 1.7rem;
     }
+
     .author-header-image {
         height: 80px;
         width: 80px;
@@ -257,7 +303,19 @@ $inter-font-path: "~inter-ui/Inter (web)";
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
     color: $white;
 }
-.footer a:hover {
-    color: $cyan;
+
+.facebook:hover {
+    color: #3b5998;
 }
 
+.linkedin:hover {
+    color: #0077B5;
+}
+
+.twitter:hover {
+    color: #00aced;
+}
+
+.github:hover {
+    color: #211F1F;
+}
