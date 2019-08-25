@@ -146,7 +146,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
 
 @media (max-width: 500px) {
     .tag-header {
-        border-bottom: var(--color-bg) 1px solid;
+        border-bottom: $black 1px solid;
         padding-bottom: 4vw;
     }
     .tag-header p {
@@ -191,7 +191,7 @@ $inter-font-path: "~inter-ui/Inter (web)";
 
 @media (max-width: 500px) {
     .author-header {
-        border-bottom: var(--color-bg) 1px solid;
+        border-bottom: $black 1px solid;
         padding-bottom: 4vw;
     }
     .author-header p {
