@@ -51,9 +51,73 @@ $navbar-item-hover-background-color: $navbar-background-color;
 @import "~bulma/bulma.sass";
 
 
-/* Main
+/* Ghost Casper Theme Styles
 /* ---------------------------------------------------------- */
 
+/* Centered content container blocks */
+.inner {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+}
+
+.post-full-header {
+    margin: 0 auto;
+    padding: 6vw 3vw 3vw;
+    max-width: 1040px;
+    text-align: center;
+}
+@media (max-width: 500px) {
+    .post-full-header {
+        padding: 14vw 3vw 10vw;
+    }
+}
+
+.post-full-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $grey;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.post-full-meta-date {
+    color: $blue;
+}
+
+.post-full-title {
+    margin: 0;
+    font-size: $size-1;
+    font-weight: 700;
+    color: $black;
+}
+
+/* Some grouped styles for smaller viewports */
+@media (max-width: 500px) {
+    .post-full-meta {
+        font-size: 1.2rem;
+        line-height: 1.3em;
+    }
+    .post-full-title {
+        font-size: $size-3;
+    }
+    .post-full-image {
+        margin-bottom: 4vw;
+        height: 350px;
+    }
+    .post-full-content {
+        padding: 0;
+    }
+    .post-full-content:before,
+    .post-full-content:after {
+        display: none;
+    }
+}
+
+/* Layout
+/* ---------------------------------------------------------- */
 .site-main {
     padding: $size-3;
 }

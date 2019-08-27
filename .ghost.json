@@ -1,7 +1,7 @@
 {
   "development": {
-    "apiUrl": "https://zost.ziondials.com",
-    "contentApiKey": "4f7ca8b05de518352b529f0095"
+    "apiUrl": "https://gatsby.ghost.io",
+    "contentApiKey": "9cc5c67c358edfdd81455149d0"
   },
   "production": {
     "apiUrl": "https://zost.ziondials.com",

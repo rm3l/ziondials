@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-
+import { Link } from 'gatsby'
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
@@ -23,11 +23,18 @@ const Post = ({ data, location }) => {
                     <style type="text/css">{`${post.codeinjection_styles}`}</style>
                 </Helmet>
                 <Layout>
-                    <div className="container">
-                        <article className="content">
+                    <div className="inner">
+                        <article className="post">
+                            <header className="post-full-header">
+                                <section className="post-full-meta">
+                                    <time className="post-full-meta-date" dateTime={post.published_at_pretty}>{post.published_at_pretty}</time>
+                                    { post.primary_tag && <span className="date-divider">/</span> }
+                                    { post.primary_tag && <Link to={post.primary_tag.slug}>{post.primary_tag.name}</Link>}
+                                </section>
+                                <h1 className="post-full-title">{post.title}</h1>
+                            </header>
                             { post.feature_image ? <figure className="post-feature-image"> <img src={ post.feature_image } alt={ post.title } /> </figure> : null }
                             <section className="post-full-content">
-                                <h1 className="content-title">{post.title}</h1>
 
                                 {/* The main post content */ }
                                 <section dangerouslySetInnerHTML={{ __html: post.html }} /> </section>
@@ -45,6 +52,11 @@ Post.propTypes = {
             html: PropTypes.string.isRequired,
             feature_image: PropTypes.string,
             codeinjection_styles: PropTypes.any,
+            published_at_pretty: PropTypes.string.isRequired,
+            primary_tag: PropTypes.shape({
+                name: PropTypes.string,
+                slug: PropTypes.string,
+            }),
         }).isRequired,
     }).isRequired,
     location: PropTypes.object.isRequired,
