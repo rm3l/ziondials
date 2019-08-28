@@ -20,24 +20,21 @@ const Author = ({ data, location, pageContext }) => {
         <>
             <MetaData data={data} location={location} type="profile" />
             <Layout>
-                <div className="container">
-                    <header className="author-header">
-                        <div className="author-header-content">
-                            <p className="has-text-weight-semibold is-size-3">{author.name}</p>
-                            {author.bio && <p className=" is-size-6">{author.bio}</p>}
-                        </div>
-                        <div className="author-header-image">
-                            {author.profile_image && <img src={author.profile_image} alt={author.name} />}
-                        </div>
-                    </header>
-                    <section className="post-feed">
-                        {posts.map(({ node }) => (
-                            // The tag below includes the markup for each post - components/common/PostCard.js
-                            <PostCard key={node.id} post={node} />
-                        ))}
-                    </section>
-                    <Pagination pageContext={pageContext} />
+                <div className="site-header-content">
+                    {author.profile_image && <img className="author-profile-image" src={author.profile_image} alt={author.name} />}
+                    <h1 className="site-title">{author.name}</h1>
+                    <h2 className="author-bio">{author.bio && <p>{author.bio}</p>}</h2>
                 </div>
+                <div className="author-meta">
+                    <div className="author-location">{author.location}</div>
+                </div>
+                <section className="post-feed">
+                    {posts.map(({ node }) => (
+                        // The tag below includes the markup for each post - components/common/PostCard.js
+                        <PostCard key={node.id} post={node} />
+                    ))}
+                </section>
+                <Pagination pageContext={pageContext} />
             </Layout>
         </>
     )

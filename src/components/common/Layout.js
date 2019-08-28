@@ -30,9 +30,10 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
             <body className={bodyClass} />
         </Helmet>
         <Navbar site={site} />
-            <main className="site-main">
-                {/* All the main content gets inserted here, index.js, post.js */}
-                {children}
+            <main className="site-main outer">
+                <div className="inner">
+                    {children}
+                </div>
             </main>
         <Footer site={site} config={config}/>
 

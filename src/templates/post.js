@@ -23,23 +23,19 @@ const Post = ({ data, location }) => {
                     <style type="text/css">{`${post.codeinjection_styles}`}</style>
                 </Helmet>
                 <Layout>
-                    <div className="inner">
-                        <article className="post">
-                            <header className="post-full-header">
-                                <section className="post-full-meta">
-                                    <time className="post-full-meta-date" dateTime={post.published_at_pretty}>{post.published_at_pretty}</time>
-                                    { post.primary_tag && <span className="date-divider">/</span> }
-                                    { post.primary_tag && <Link to={post.primary_tag.slug}>{post.primary_tag.name}</Link>}
-                                </section>
-                                <h1 className="post-full-title">{post.title}</h1>
-                            </header>
-                            { post.feature_image ? <figure className="post-feature-image"> <img src={ post.feature_image } alt={ post.title } /> </figure> : null }
-                            <section className="post-full-content">
-
-                                {/* The main post content */ }
-                                <section dangerouslySetInnerHTML={{ __html: post.html }} /> </section>
-                        </article>
-                    </div>
+                    <article className="post-full">
+                        <header className="post-full-header">
+                            <section className="post-full-meta">
+                                <time className="post-full-meta-date" dateTime={post.published_at_pretty}>{post.published_at_pretty}</time>
+                                { post.primary_tag && <span className="date-divider"> / </span> }
+                                { post.primary_tag && <Link to={`/tag/` + post.primary_tag.slug}>{post.primary_tag.name}</Link>}
+                            </section>
+                            <h1 className="post-full-title">{post.title}</h1>
+                        </header>
+                        { post.feature_image ? <figure className="post-full-image"> <img src={ post.feature_image } alt={ post.title } /> </figure> : null }
+                        <section className="post-full-content">
+                            <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} /> </section>
+                    </article>
                 </Layout>
             </>
     )
