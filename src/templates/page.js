@@ -30,7 +30,6 @@ const Page = ({ data, location }) => {
                     <figure className="post-full-image">
                         {page.feature_image && <img src={page.feature_image} alt={page.title}></img>}
                     </figure>
-                    <section dangerouslySetInnerHTML={{ __html: page.html }} />
                     <section className="post-full-content">
                         <div className="post-content" dangerouslySetInnerHTML={{ __html: page.html }} />
                     </section>
