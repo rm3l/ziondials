@@ -645,7 +645,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 @media (max-width: 800px) {
     .post-full-content {
-        font-size: 1.9rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -809,7 +809,7 @@ Usage (In Ghost editor):
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400!important;
-    background: var(--whitegrey);
+    // background: $grey-light;
     border-radius: 3px;
 }
 
