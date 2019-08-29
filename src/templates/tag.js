@@ -19,19 +19,17 @@ const Tag = ({ data, location, pageContext }) => {
         <>
             <MetaData data={data} location={location} type="series" />
             <Layout>
-                <div className="container">
-                    <header className="content">
-                        <h1>{tag.name}</h1>
-                        {tag.description ? <p>{tag.description}</p> : null }
-                    </header>
-                    <section className="post-feed">
-                        {posts.map(({ node }) => (
-                            // The tag below includes the markup for each post - components/common/PostCard.js
-                            <PostCard key={node.id} post={node} />
-                        ))}
-                    </section>
-                    <Pagination pageContext={pageContext} />
+                <div className="site-header-content">
+                    <h1 className="site-title">{tag.name}</h1>
+                    {tag.description ? <h2 className="site-description">{tag.description}</h2> : null }
                 </div>
+                <div className="post-feed">
+                    {posts.map(({ node }) => (
+                        // The tag below includes the markup for each post - components/common/PostCard.js
+                        <PostCard key={node.id} post={node} />
+                    ))}
+                </div>
+                <Pagination pageContext={pageContext} />
             </Layout>
         </>
     )

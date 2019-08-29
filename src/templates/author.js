@@ -24,9 +24,9 @@ const Author = ({ data, location, pageContext }) => {
                     {author.profile_image && <img className="author-profile-image" src={author.profile_image} alt={author.name} />}
                     <h1 className="site-title">{author.name}</h1>
                     <h2 className="author-bio">{author.bio && <p>{author.bio}</p>}</h2>
-                </div>
-                <div className="author-meta">
-                    <div className="author-location">{author.location}</div>
+                    <div className="author-meta">
+                        <div className="author-location">{author.location}</div>
+                    </div>
                 </div>
                 <section className="post-feed">
                     {posts.map(({ node }) => (
