@@ -44,7 +44,6 @@ export class Navbar extends PureComponent {
                         <Link to="/" activeClassName="is-active" className="navbar-item">Home</Link>
                         <Link to="/about/" activeClassName="is-active" className="navbar-item">About</Link>
                         <Link to="/contact/" activeClassName="is-active" className="navbar-item">Contact</Link>
-                        <a href="https://zost.ziondials.com" activeClassName="is-active" className="navbar-item">View the Ghost CMS</a>
                     </div>
                 </div>
             </nav>
