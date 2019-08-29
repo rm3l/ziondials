@@ -27,9 +27,9 @@ const Page = ({ data, location }) => {
                     <header className="post-full-header">
                         <h1 className="post-full-title">{page.title}</h1>
                     </header>
-                    <figure className="post-full-image">
-                        {page.feature_image && <img src={page.feature_image} alt={page.title}></img>}
-                    </figure>
+                    {page.feature_image && <figure className="post-full-image">
+                        <img src={page.feature_image} alt={page.title}></img>
+                    </figure>}
                     <section className="post-full-content">
                         <div className="post-content" dangerouslySetInnerHTML={{ __html: page.html }} />
                     </section>

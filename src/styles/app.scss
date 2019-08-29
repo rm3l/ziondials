@@ -335,16 +335,16 @@ li {
 .post-card-tags {
     display: block;
     margin-bottom: 4px;
-    color: var(--midgrey);
-    font-size: 1.2rem;
+    color: $grey-light;
+    font-size: $size-6;
     line-height: 1.15em;
-    font-weight: 500;
     letter-spacing: 0.5px;
-    text-transform: uppercase;
 }
 
 .post-card-title {
     margin-top: 0;
+    font-size: $size-4;
+    font-weight: 600;
 }
 
 .post-card-content {
@@ -604,10 +604,8 @@ make sure this only happens on large viewports / desktop-ish devices.
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--midgrey);
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-transform: uppercase;
+    color: $grey;
+    font-size: 1.25rem;
 }
 
 .post-full-meta-date {
@@ -616,11 +614,14 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-full-title {
     margin: 0;
-    color: color(var(--darkgrey) l(-5%));
+    color: $black;
+    font-size: $size-2;
+    font-weight: 600;
 }
 
 .date-divider {
     display: inline-block;
+    color: $black;
     margin: 0 6px 1px;
 }
 
@@ -1019,7 +1020,7 @@ Usage (In Ghost editor):
     }
 
     .post-full-title {
-        font-size: 2.9rem;
+        font-size: 2rem;
     }
 
     .post-full-image {
